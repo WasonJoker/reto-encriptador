@@ -1,7 +1,97 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  background: #F3F5FC;
 }
 
-#logo {
-  width: 20%;
+header {
+  padding: 10px 10px 0;
+}
+
+.logo {
+  width: 8%;
+  border-radius: 10px;
+}
+
+main {
+  display: flex;
+  margin-bottom: 50px;
+  margin-left: 80px;
+}
+
+.text-area {
+  border: none;
+  color: #0A3871;
+  margin-top: 90px;
+  text-transform: lowercase;
+}
+
+::placeholder {
+  color: #0A3871;
+}
+
+.text-area:focus {
+  outline: none;
+}
+
+.mensaje {
+  background: white;
+  background-image: url("/img/buscando-inicio.jfif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  border-radius: 24px;
+  color: #0A3871;
+  margin-left: 98px;
+  margin-top: 20px;
+  padding-left: 20px;
+  position: fixed;
+}
+
+.mensaje:focus {
+  outline: none;
+}
+
+.botones {
+  display: flex;
+  margin-top: 18px;
+}
+
+.btn-desencriptar, .btn-encriptar, .copiar {
+  border: 1px solid #0A3871;
+  border-radius: 24px;
+  cursor: pointer;
+  height: 67px;
+  width: 228px;
+}
+
+.btn-desencriptar {
+  background: #D8DFE8;
+  color: #0A3871;
+  margin-left: 30px;
+}
+
+.btn-encriptar {
+  background-color: #0A3871;
+  color: white;
+}
+
+.copiar {
+  background: #FFF;
+  color: #0A3871;
+  margin-left: 108px;
+  margin-top: 402px;
+  position: absolute;
+  width: 150px;
+}
+
+.informacion {
+  color: #495057;
+  font-size: 18px;
+}
+
+footer {
+  margin-bottom: 20px;
 }
