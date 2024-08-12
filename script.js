@@ -34,12 +34,12 @@ function btnDesencriptar() {
 }
 
 
-function desencriptar(stringDesencriptado){
+function encriptar(stringDesencriptado){
     let matrizCodigo = [["e", "enter"], ["i", "ines"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]]
     stringDesencriptado = stringDesencriptado.toLowerCase()
 
     for (let i = 0; i < matrizCodigo.length; i++) {
-        if(stringDesencriptado.includes(matrizCodigo[i][1])) {
+        if(stringDesencriptado.includes(matrizCodigo[i][0])) {
             stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0])
         }
 
