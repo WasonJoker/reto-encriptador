@@ -1,36 +1,56 @@
 <!DOCTYPE html>
-<html lang="es-mex">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador - Alura</title>
+    <title>Encriptador de texto</title>
+    <link rel="shortcut icon" href="./img/Yoriichi Icon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <img class="logo" src="./img/a-logo.png" alt="Logo Alura">
-    </header>
-    <main>
-        <section>
-            <textarea class="text-area" cols="30" rows="10" placeholder="Ingresa tu texto aquí..."></textarea>
-            <div>
-                <h6 class="informacion">Solo letras minusculas y sin acentos.</h6>
-            </div>
-            <div class="botones">
-                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
-                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
-            </div>
-        </section>
-        <section>
-            <textarea class="mensaje" cols="20" rows="10"></textarea>
-            <div>
-                <button class="btn-copiar">Copiar</button>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>Desarrollado por: César Pinha.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
+   <body>
+    
+    <div class="container">
+      <img class= "logo-a" src="./img/Logo.png" alt="logo alura">
+        <div class="encriptar">
+            <textarea  
+            name="texto"
+            class="texto" 
+            id="texto"
+            cols="30" 
+            rows="10" 
+            placeholder="ingresa el texto aquí"
+            ></textarea>
+      <div class="botones">
+        <button class="btn-encriptar" type="button" onclick="encriptar()">
+        Encriptar
+        </button>
+        <input 
+         type="button" 
+         class="btn-desencriptar" 
+         value="Desencriptar" 
+         onclick="desencriptar()"
+        /> 
+      </div>
+    </div>
+    <div class = "alerta">
+      <i class="material-icons" >error_outline</i>
+      <p>Solo letras minúsculas y sin acentos</p>
+    </div>
+    <div class="encriptado">
+        <img src="./img/gojo.png" alt="satoru" id="muñeco">
+        <div class="mensaje-encriptado">
+            <h2 id="titulo-mensaje">Ningún mensaje encontrado</h2>
+            <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+          <!--textarea 
+            name="mensaje" 
+            id="mensaje" 
+            cols="30" 
+            class="mensaje" 
+          ></textarea-->
+        </div>
+      </div>
+    </div>
+  </body>   
+  <script src="script.js"></script>
 </html>

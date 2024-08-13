@@ -1,48 +1,51 @@
-const textArea = document.querySelector(".text-area")
-const mensaje = document.querySelector(".mensaje")
+function encriptar() {
+    const texto = document.getElementById("texto").value;
+    const tituloMensaje = document.getElementById("titulo-mensaje");
+    const parrafo = document.getElementById("parrafo");
+    const muñeco = document.getElementById("muñeco");
 
-// La letra "e" es convertida para "enter"
-// La letra "i" es convertida para "imes"
-// La letra "a" es convertida para "ai"
-// La letra "o" es convertida para "ober"
-// La letra "u" es convertida para "ufat"
+    if (texto.trim() !== "") {
+        const textoCifrado = texto
+            .replace(/e/gi, "enter")
+            .replace(/i/gi, "imes")
+            .replace(/a/gi, "ai")
+            .replace(/o/gi, "ober")
+            .replace(/u/gi, "ufat");
 
-function btnEncriptar() {
-    const textoEncriptado = encriptar(textArea.value)
-    mensaje.value = textoEncriptado
-    textArea.value = "";
-    mensaje.style.backgroundImage = "none";
-}
-
-function encriptar(stringEncriptado){
-    let matrizCodigo = [["e", "enter"], ["i", "ines"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]]
-    stringEncriptado = stringEncriptado.toLowerCase()
-
-    for (let i = 0; i < matrizCodigo.length; i++) {
-        if(stringEncriptado.includes(matrizCodigo[i][0])) {
-            stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
-        }
-
+        document.getElementById("texto").value = textoCifrado;
+        tituloMensaje.textContent = "Texto encriptado con éxito";
+        parrafo.textContent = "";
+        muñeco.src = "./img/Yorichi-bck.png";
+    } else {
+        muñeco.src = "./img/kmt-shi-bck.png";
+        tituloMensaje.textContent = "Ningún mensaje fue encontrado";
+        parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+        alert("Debes ingresar algún texto");
     }
-    return stringEncriptado
 }
 
-function btnDesencriptar() {
-    const textoEncriptado = desencriptar(textArea.value)
-    mensaje.value = textoEncriptado
-    textArea.value = "";
-}
+function desencriptar() {
+    const texto = document.getElementById("texto").value;
+    const tituloMensaje = document.getElementById("titulo-mensaje");
+    const parrafo = document.getElementById("parrafo");
+    const muñeco = document.getElementById("muñeco");
 
+    if (texto.trim() !== "") {
+        const textoCifrado = texto
+            .replace(/enter/gi, "e")
+            .replace(/imes/gi, "i")
+            .replace(/ai/gi, "a")
+            .replace(/ober/gi, "o")
+            .replace(/ufat/gi, "u");
 
-function desencriptar(stringDesencriptado){
-    let matrizCodigo = [["e", "enter"], ["i", "ines"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]]
-    stringDesencriptado = stringDesencriptado.toLowerCase()
-
-    for (let i = 0; i < matrizCodigo.length; i++) {
-        if(stringDesencriptado.includes(matrizCodigo[i][0])) {
-            stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0])
-        }
-
+        document.getElementById("texto").value = textoCifrado;
+        tituloMensaje.textContent = "Texto desencriptado con éxito";
+        parrafo.textContent = "";
+        muñeco.src = "./img/gojo.png";
+    } else {
+        muñeco.src = "./img/kmt-shi-bck.png";
+        tituloMensaje.textContent = "Ningún mensaje fue encontrado";
+        parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+        alert("Debes ingresar algún texto");
     }
-    return stringDesencriptado
 }
