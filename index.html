@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador - Alura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="contenedor">
+    <header class="contenedor__cabeza">
+        <img class="contenedor__cabeza__img" src="./img/logoA.jpg" alt="Logo Alura">
+        <h1 class="contenedor__cabeza__titulo">Encriptador de textos</h1>
+        <p class="contenedor__cabeza__NAN"></p>
+    </header>
+
+
+    <main class="cuerpo__encriptador">
+        <input class="cuerpo__input" placeholder="ingresa solamente minusculas y sin caracteres especiales."></textarea>
+        <p>Solo letras minusculas, sin caracteres especiales ni números.</p>
+
+        <div class="cuerpo__botones__encriptacion">
+            <button class="boton__encriptador">Encriptar</button>
+            <button class="boton__desencriptador">Desencriptar</button>
+        </div>
+
+        <div>
+            <textarea id="output-textarea" placeholder="Resultado aparecerá aquí..."></textarea>
+            <!-- Código para añadir una imagen dentro de la segunda textarea -->
+            <!-- <img src="./img/CerebroAI.webp" alt="Descripción de la imagen"> -->
+        </div>
+
+        <div>
+            <button id="copiar-btn">Copiar</button>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <p>Desarrollado por: César Piña. - Alura - Oracle One G7 2024 &copy;</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
