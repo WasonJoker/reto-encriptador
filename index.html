@@ -12,23 +12,24 @@
         <h1 class="contenedor__cabeza__titulo">Encriptador de textos</h1>
     </header>
 
+    <!-- Banner de advertencia -->
+    <div id="banner" class="banner" style="display: none;">No se permiten números ni caracteres especiales</div>
+
     <main class="cuerpo__encriptador">
-        <input class="cuerpo__encriptador__input" placeholder="ingresa solamente minusculas y sin caracteres especiales."></textarea>
-        <p>Solo letras minusculas, sin caracteres especiales ni números.</p>
+        <input id="cuerpo__encriptador__input" class="cuerpo__encriptador__input" placeholder="Ingresa solamente minúsculas y sin caracteres especiales." oninput="validarInput()">
+        <p>Solo letras minúsculas, sin caracteres especiales ni números.</p>
 
         <div class="cuerpo__botones__encriptacion">
-            <button class="boton__encriptador">Encriptar</button>
-            <button class="boton__desencriptador">Desencriptar</button>
+            <button class="boton__encriptador" onclick="encriptar()">Encriptar</button>
+            <button class="boton__desencriptador" onclick="desencriptar()">Desencriptar</button>
         </div>
 
-        <div class="cuerpo__desencriptador__input">
-            <textarea class="cuerpo__desencriptador__input" placeholder="Resultado aparecerá aquí..."></textarea>
-            <!-- Código para añadir una imagen dentro de la segunda textarea -->
-            <!-- <img src="./img/CerebroAI.webp" alt="Descripción de la imagen"> -->
+        <div class="cuerpo__desencriptador__output">
+            <textarea id="cuerpo__desencriptador__output" class="cuerpo__desencriptador__output" placeholder="Resultado aparecerá aquí..."></textarea>
         </div>
 
         <div>
-            <button id="copiar-btn">Copiar</button>
+            <button id="copiar-btn" onclick="copiar()">Copiar</button>
         </div>
     </main>
 
@@ -36,6 +37,6 @@
         <p>Desarrollado por: César Piña. - Alura - Oracle One G7 2024 &copy;</p>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
